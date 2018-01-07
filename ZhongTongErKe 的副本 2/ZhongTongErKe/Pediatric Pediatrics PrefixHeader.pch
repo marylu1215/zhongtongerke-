@@ -1,0 +1,165 @@
+//
+//  Pediatric Pediatrics PrefixHeader.pch
+//  ZhongTongErKe
+//
+//  Created by khj on 2017/5/26.
+//  Copyright © 2017年 Claf. All rights reserved.
+//
+
+#ifndef Pediatric_Pediatrics_PrefixHeader_pch
+#define Pediatric_Pediatrics_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+
+#import "XFWorkBaseController.h"
+#import "XFWorkBaseTableViewController.h"
+
+
+#import "SSConfigDefine.h"
+#import <Masonry/Masonry.h>
+#import "UILabel+Extension.h"
+#import "UIButton+Extension.h"
+#import "UITextField+XFExtension.h"
+#import "UIColor+Extension.h"
+#import "XFConst.h"
+#import <UIView+SDAutoLayout.h>
+#import "NSString+Tools.h"
+#import "UIView+Frame.h"
+#import "UIColor+Extension.h"
+#import <UIImageView+WebCache.h>
+#import "UIButton+WebCache.h"
+#import "MBProgressHUD+MJ.h"
+#import "UIButton+XFExtension.h"
+#import "UITextField+expanded.h"
+#import "UIImageView+KJExtension.h"
+#import "XFBaseLineTableCell.h"
+#import <MJRefresh.h>
+#import "ICConst.h"
+#import <MJExtension.h>
+#import <AFNetworking.h>
+#import "XFModelTest.h"
+#import "HttpTool.h"
+#import "NSDate+KJExtension.h"
+#import "NSString+Tools.h"
+#import "NSArray+Tool.h"
+#import "UserTool.h"
+#import "LoginViewController.h"
+
+#ifdef DEBUG
+#define ICString [NSString stringWithFormat:@"%s", __FILE__].lastPathComponent
+#define ICLog(...)  printf("%s: %s %s 第%d行: %s\n\n",[[NSString ic_stringDate] UTF8String], [ICString UTF8String] ,__func__,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+
+#else
+#define ICLog(...)
+#endif
+
+// 屏幕尺寸相关
+#define WidthRatio [UIScreen mainScreen].bounds.size.width/375.0
+#define HeightRatio [UIScreen mainScreen].bounds.size.height/667.0
+// 字体相关
+#define font(n) [UIFont systemFontOfSize:n]
+#define px(n) (n)/2
+#define RGBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define c255255255 RGBColor(255, 255, 255, 1.0)
+#define  bgColor [UIColor colorWithHexString:@"f1f0f0"]
+#define cGrayWord RGBColor(76, 76, 76, 1.0)//灰色字体颜色
+#define cMainLine RGBColor(217, 217, 217, 1.0)//主体内容横条颜色
+#define c240240240 RGBColor(240, 240, 240, 1.0)
+#define c218218218  RGBColor(218, 218, 218, 1.0)
+#define cHBColor  RGBColor(63, 230,216, 1.0)
+#define c172218241 RGBColor(172, 218, 241, 1.0)
+#define c170170170 RGBColor(170, 170, 170, 1.0)
+#define c484746 RGBColor(48, 47, 46, 1.0)
+#define cGrayBorder  RGBColor(128,128,128,1.0)
+#define cIndentifyCode  RGBColor(80, 80, 80, 1.0)
+#define LMargin 15
+#define pxLineHeight 0.5
+#define kCorner 1
+#define NUMBERS @"0123456789"
+#define Font15 15
+#define Font24 24
+#define Font13 12
+#define Font9  9
+#define kPx(n) (n) * 0.5
+#define sepBgColor [UIColor colorWithHexString:@"e9e9e9"]
+#define aSepBgColor [UIColor colorWithHexString:@"aaaaaa"]
+#define btnRadius 6
+/********* 提示HUD ***************/
+#define netWorkError ([MBProgressHUD showError:@"服务器异常..."])
+#define kHideHUD [MBProgressHUD hideHUD]
+#define kHideHUDAll [MBProgressHUD hideHUDAll]
+// 判断系统版本
+#define IOS7_OR_LATER   ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending)
+#define IOS7            ([[[UIDevice currentDevice] systemVersion] integerValue] >= 7)
+// 判断大小手机
+#define IPHONE6_OR_LATER ([UIScreen mainScreen].bounds.size.width >= 375)
+
+// 各系统版本导航高度
+#define NavBar_Height   (IOS7_OR_LATER ? 64 : 44)
+#define TabBar_Height   49
+#define pageNumStart 1
+#define kshowMessage(msg) [MBProgressHUD showMessage:(msg)]
+//所有圆角
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#if DEBUG
+//...表示参数不固定    __VA_ARGS__  获取参数列表  ##连接宏， 若它的右边没有参数会自动取消左边的逗号
+#define SSLog(FORMART, ...) NSLog(FORMART, ##__VA_ARGS__)
+#else
+#define PLLOG(FORMART, ...) nil
+#endif
+//** QQ */
+//response
+#define kCGIRequest @"kTencentCGIRequest"
+#define kResponse @"kResponse"
+#define kTencentOAuth @"oauth"
+#define kUIViewController @"UIViewController"
+#define kTencentRespObj @"kTencentRespObj"
+
+//delagate
+
+//login
+#define kLoginSuccessed @"loginSuccessed"
+#define kLoginFailed    @"loginFailed"
+#define kLoginCancelled @"loginCancelled"
+
+// 极光推送AppKey
+#define kJPUSHAppKey @"be0c6c8c6f09a159bbaed6dd"
+
+#define kChannel @""
+
+//TCAPIRequest
+#define kTencentCGIRequest     @"kTencentCGIRequest"
+//tencentApi
+#define kTencentApiResp @"kTencentApiResp"
+//融云
+#define LRonAppKey @"p5tvi9dspm5b4"
+
+
+#define DEFAULTS [NSUserDefaults standardUserDefaults]
+#define ShareApplicationDelegate [[UIApplication sharedApplication] delegate]
+#define HEXCOLOR(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define IOS_FSystenVersion ([[[UIDevice currentDevice] systemVersion] floatValue])
+
+#define RCDDebugTestFunction 0
+
+#define RCDPrivateCloudManualMode 0
+
+#define RCDscreenWidth [UIScreen mainScreen].bounds.size.width
+#define RCDscreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define BaseURL @"http://yf.xnetyy.com/index.php?s=/Admin"
+
+#define ImageBaseURL @"http://yf.xnetyy.com"
+
+
+
+#endif
+
+
+
+#endif /* Pediatric_Pediatrics_PrefixHeader_pch */

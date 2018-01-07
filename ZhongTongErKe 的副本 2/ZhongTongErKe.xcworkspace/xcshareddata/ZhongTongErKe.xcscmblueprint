@@ -1,0 +1,35 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "d8328946-2cda-e148-9e76-730ad663cec0++8095",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "645eafc2-9a2c-0e43-9ab9-50fd0b9af909++2462" : {
+
+    },
+    "d8328946-2cda-e148-9e76-730ad663cec0++8095" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "645eafc2-9a2c-0e43-9ab9-50fd0b9af909++2462" : 9223372036854775807,
+    "d8328946-2cda-e148-9e76-730ad663cec0++8095" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1E756855-1A69-4C95-80F3-7271BEC76B42",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "645eafc2-9a2c-0e43-9ab9-50fd0b9af909++2462" : "..\/..\/Desktop\/workspace\/%E5%B7%A7%E6%89%8B\/KJMagicFinger",
+    "d8328946-2cda-e148-9e76-730ad663cec0++8095" : "ZhongTongErKe\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ZhongTongErKe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ZhongTongErKe.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/192.168.1.23",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "645eafc2-9a2c-0e43-9ab9-50fd0b9af909++2462"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/172.168.100.110\/svn\/zhongtongerke",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d8328946-2cda-e148-9e76-730ad663cec0++8095"
+    }
+  ]
+}
